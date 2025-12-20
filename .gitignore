@@ -12,3 +12,5 @@ airflow.db
 
 # Ignore crawler raw outputs (crawled pages and extracted docs)
 include/data/raw/
+#Ignore sparkingly temporary files
+include/data/processed/
