@@ -9,4 +9,6 @@ airflow-webserver.pid
 webserver_config.py
 airflow.cfg
 airflow.db
+
+# Ignore crawler raw outputs (crawled pages and extracted docs)
 include/data/raw/
