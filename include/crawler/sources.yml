@@ -1,0 +1,33 @@
+sources:
+  - name: FTC_ALERTS
+    start_urls:
+      - "https://consumer.ftc.gov/consumer-alerts"
+    allow_domains: ["consumer.ftc.gov"]
+    article_url_contains:
+      - "/consumer-alerts/"
+    next_page_selector: 'a[rel="next"]'
+    rate_limit_seconds: 2
+    max_list_pages: 5
+
+  - name: FINCEN_ADVISORIES
+    start_urls:
+      - "https://www.fincen.gov/resources/advisoriesbulletinsfact-sheets"
+    allow_domains: ["www.fincen.gov", "fincen.gov"]
+    article_url_contains:
+      - "/resources/"
+      - "/news/"
+      - "/sites/default/files/"
+    next_page_selector: ""   # no pagination here typically
+    rate_limit_seconds: 2
+    max_list_pages: 2
+
+  - name: IC3_REPORTS
+    start_urls:
+      - "https://www.ic3.gov/annualreport/reports"
+    allow_domains: ["www.ic3.gov", "ic3.gov"]
+    article_url_contains:
+      - "/annualreport/"
+      - ".pdf"
+    next_page_selector: ""
+    rate_limit_seconds: 2
+    max_list_pages: 2
