@@ -9,5 +9,4 @@ airflow-webserver.pid
 webserver_config.py
 airflow.cfg
 airflow.db
-raw_pages
-docs.jsonl
+include/data/raw/
