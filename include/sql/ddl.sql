@@ -15,7 +15,7 @@ create or replace table fraud_intel_raw.doc_ingest(
     published_date string,
     text        string,
     content_hash string,
-    load_ts  timestamp_ntz default current_timestamp(),
+    load_ts  timestamp_ntz default current_timestamp()
 
 );
 create or replace table fraud_intel_curated.doc_version (
