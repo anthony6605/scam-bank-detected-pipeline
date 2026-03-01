@@ -1,6 +1,6 @@
 USE DATABASE SCAM_BANK_DB;
 
--- Close existing current versions when content changed
+
 UPDATE SCAM_BANK_DB.FRAUD_INTEL_CURATED.DOC_VERSION tgt
 SET
   valid_to = src.fetched_at,
@@ -46,9 +46,9 @@ LEFT JOIN SCAM_BANK_DB.FRAUD_INTEL_CURATED.DOC_VERSION v
  AND v.content_hash = i.content_hash
 WHERE v.doc_id IS NULL;
 
--- =========================
--- 2) Rebuild scores for current versions (simple approach)
--- =========================
+
+-- 2) Rebuild scores for current versions 
+
 DELETE FROM SCAM_BANK_DB.FRAUD_INTEL_CURATED.DOC_TYPOLOGY_SCORE;
 DELETE FROM SCAM_BANK_DB.FRAUD_INTEL_CURATED.DOC_SIGNALS;
 
